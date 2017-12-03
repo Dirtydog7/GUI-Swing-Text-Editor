@@ -1,0 +1,16 @@
+
+public class TWorkers {
+
+	public static void main(String[] args) {
+		WorkerRunnable awr = null;
+		Thread localThread;
+		awr = new WorkerRunnable("This one", 2000);
+		localThread = new Thread(awr);
+		localThread.start();
+		awr = new WorkerRunnable("That one", 6000);
+		localThread = new Thread(awr);
+		localThread.start();
+
+	}
+
+}
